@@ -27,6 +27,12 @@ body
     background-color: var(--white);
     border-radius: 10px;
 }
+@media (max-width: 375px) {
+    .container__card
+    {
+        flex-direction: column;
+    }
+}
 .card__text
 {
    margin:  0 20px;
@@ -36,9 +42,14 @@ body
     text-transform: uppercase;
     color: var(--grey);
     margin-top: 10px;
+    letter-spacing:8px ;
 }
-.card__text h1,
-.card__text p
+.card__text--h1
+{
+    font-family: 'Fraunces', serif;
+    margin: 15px 0;
+}
+.card__text--p
 {
     margin: 20px 0;
 }
@@ -58,16 +69,37 @@ body
     color: var(--green);
     font-family: 'Fraunces', serif; 
 }
-img
+.flex
 {
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#product
+{
     width: 300px;
+    height: auto;
     border-radius: 10px 0 0 10px;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-width: 375px) {
+    #product
+    {
+        border-radius: 10px 10px 0 0;   
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 175px;
+    }
 }
 .btn
 {
     border: none;
     margin-top: 30px;
+    margin-bottom: 10px;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
